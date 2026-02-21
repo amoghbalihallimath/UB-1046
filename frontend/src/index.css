@@ -1,0 +1,289 @@
+/* ============================================
+   Samadhana AI — Elite Professional Design System
+   (15-Year UI/UX standard | National Elite)
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Elite Palette — Midnight Navy & Burnt Saffron (Color Hunt Integrated) */
+  --elite-navy-deep: #001f3d;
+  --elite-navy: #002e5a;
+  --elite-saffron: #ed985f;
+  --elite-saffron-light: #f7b980;
+  --elite-neutral: #e6e6e6;
+  --elite-green: #065f46;
+
+  /* Refined Neutrals */
+  --elite-white: #ffffff;
+  --elite-bg: #f8fafc;
+  --elite-bg-soft: var(--elite-neutral);
+  --elite-border: #cbd5e1;
+  --elite-border-hover: #94a3b8;
+
+  /* Text System */
+  --elite-text-title: #001f3d;
+  --elite-text-body: #1e293b;
+  --elite-text-muted: #64748b;
+
+  /* Precision Spacing (8px Grid) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-12: 96px;
+
+  /* High-Fidelity Details */
+  --radius-elite: 12px;
+  --radius-pill: 9999px;
+  --shadow-elite-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-elite-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-elite-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.12);
+
+  --transition-elite: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== RESET & PRECISION DEFAULTS ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: var(--elite-bg);
+  color: var(--elite-text-body);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+.elite-font {
+  font-family: 'Outfit', sans-serif;
+  color: var(--elite-text-title);
+  letter-spacing: -0.02em;
+}
+
+.elite-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+/* ===== ELITE NAVBAR SYSTEM (Dual-Tier) ===== */
+.nav-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-elite-md);
+}
+
+/* Remove ALL centering constraints so brand & helpline sit at true left edge */
+.nav-wrapper .elite-container {
+  max-width: 100%;
+  /* Don't constrain width */
+  margin-left: 0;
+  /* Remove the 0 auto centering */
+  margin-right: 0;
+  padding-left: 0;
+  /* No left gap */
+}
+
+/* Upper Utility Tier */
+.nav-tier-utility {
+  background: var(--elite-navy-deep);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  font-weight: 600;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.utility-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 0;
+  /* Pin helpline to absolute left */
+}
+
+.utility-left {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.utility-right {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.utility-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.elite-saffron-text {
+  color: var(--elite-saffron);
+  font-weight: 800;
+}
+
+/* Main Navigation Tier */
+.nav-tier-main {
+  background: var(--elite-white);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--elite-border);
+}
+
+.nav-main-flex {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0;
+  /* Pin SAMADHANA AI to absolute left */
+}
+
+.elite-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.brand-symbol {
+  width: 40px;
+  height: 40px;
+  background: var(--elite-navy-deep);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.brand-text-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--elite-navy-deep);
+  line-height: 1.1;
+}
+
+.brand-tagline {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--elite-saffron);
+  letter-spacing: 1px;
+}
+
+.elite-nav-links {
+  display: flex;
+  gap: var(--space-1);
+  margin-left: auto;
+  /* Push all nav links to the far right */
+  align-items: center;
+}
+
+.elite-nav-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--elite-text-body);
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: var(--transition-elite);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.elite-nav-link:active {
+  transform: scale(0.95);
+}
+
+.elite-nav-link:hover,
+.elite-nav-link.active {
+  color: var(--elite-navy-deep);
+  background: var(--elite-bg-soft);
+}
+
+.elite-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.nav-tier-main .elite-nav-actions {
+  display: none;
+  /* Links and logout are now all in elite-nav-links */
+}
+
+.nav-tier-main .btn-elite {
+  padding: 8px 20px;
+  /* Balanced padding for perfect row alignment */
+}
+
+/* ===== ELITE BUTTONS ===== */
+.btn-elite {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-elite);
+  border: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-elite:active {
+  transform: scale(0.95) !important;
+  transition: transform 0.1s;
+}
+
+.btn-elite-primary {
+  background: var(--elite-navy-deep);
+  color: white;
+}
+
+.btn-elite-primary:hover {
+  background: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+}
+
+.btn-elite-outline {
+  background: transparent;
+  border: 1.5px solid var(--elite-navy-deep);
+  color: var(--elite-navy-deep);
+}
+
+.btn-elite-outline:hover {
+  background: var(--elite-bg-soft);
+}
+
+/* Hide Legacy */
+.navbar,
+.gov-navbar,
+.aria-nav,
+.govt-strip {
+  display: none !important;
+}

@@ -1,0 +1,276 @@
+/* Elite Dashboard Styles (15-Year Standard) */
+
+.elite-dashboard {
+    min-height: 100vh;
+    background-color: var(--elite-bg);
+}
+
+/* --- Split Hero System --- */
+.hero-split {
+    display: flex;
+    min-height: auto;
+    background: var(--elite-white);
+    position: relative;
+}
+
+.hero-split::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--elite-saffron);
+    transition: var(--transition-elite);
+    cursor: pointer;
+}
+
+.hero-split:hover::after {
+    height: 6px;
+    background: #f7a56a;
+    /* slightly lighter for hover effect */
+}
+
+.hero-split:active::after {
+    background: var(--elite-saffron-light);
+    height: 4px;
+}
+
+.hero-content-side {
+    flex: 1.5;
+    /* Takes up slightly more space so the image is smaller */
+    padding: var(--space-12) 0 var(--space-12) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: var(--space-8);
+}
+
+.hero-visual-side {
+    flex: 1;
+    /* Takes up remaining space */
+    background: linear-gradient(rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.4)),
+        url('https://images.unsplash.com/photo-1541888037320-1eb07d9f7e53?auto=format&fit=crop&q=80&w=1200');
+    /* Professional workspace */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.hero-badge-elite {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--elite-saffron);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin-top: 1.5em;
+    /* 1.5 line spacing above the badge from top of section */
+    margin-bottom: var(--space-4);
+}
+
+.hero-headline-elite {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: var(--space-4);
+    color: var(--elite-navy-deep);
+}
+
+.hero-headline-elite span {
+    color: var(--elite-saffron);
+}
+
+.hero-subtext-elite {
+    font-size: 1.15rem;
+    color: var(--elite-text-muted);
+    max-width: 520px;
+    line-height: 1.5;
+    margin-bottom: var(--space-6);
+}
+
+/* --- Game Changer Feature Cards --- */
+.game-changer-section {
+    position: relative;
+    margin-top: 3rem;
+    /* 1 line (~1.5em) of breathing room below the orange line */
+    z-index: 10;
+}
+
+.feature-grid-elite {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+}
+
+.feature-card-elite {
+    background: var(--elite-white);
+    border-radius: var(--radius-elite);
+    padding: var(--space-4);
+    box-shadow: var(--shadow-elite-md);
+    transition: var(--transition-elite);
+    border: 1px solid var(--elite-border);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.feature-card-elite:hover {
+    transform: translateY(-8px);
+    border-color: var(--elite-saffron);
+}
+
+.feature-card-elite:active {
+    transform: scale(0.98);
+}
+
+.highlight-card {
+    background: var(--elite-navy-deep);
+    border-color: var(--elite-navy-deep);
+}
+
+.highlight-card .feature-title-elite {
+    color: white;
+}
+
+.highlight-card .feature-desc-elite {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.highlight-card .feature-icon-elite {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.feature-icon-elite {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: var(--elite-bg-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: var(--space-4);
+}
+
+.feature-title-elite {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: var(--space-2);
+}
+
+.feature-desc-elite {
+    font-size: 0.95rem;
+    color: var(--elite-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-4);
+}
+
+.card-action-trigger {
+    margin-top: auto;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--elite-saffron);
+}
+
+.elite-nav-actions {
+    margin-bottom: var(--space-8);
+    /* Add space before the bottom orange line */
+}
+
+/* --- Minimal Smart Footer --- */
+.elite-footer {
+    padding: var(--space-12) 0 var(--space-8) 0;
+    background: #001F3D;
+    /* Dark navy background */
+    border-top: 1px solid rgba(237, 152, 95, 0.3);
+    color: #ED985F;
+    /* Orange text as default */
+}
+
+.footer-main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--space-8);
+    margin-bottom: var(--space-8);
+}
+
+.footer-brand-side h4 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-2);
+    color: #ED985F;
+}
+
+.footer-brand-side p {
+    font-size: 0.85rem;
+    color: rgba(237, 152, 95, 0.75);
+    /* softer orange for body text */
+    max-width: 320px;
+}
+
+.footer-nav-col h5 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--space-4);
+    color: #ED985F;
+}
+
+.footer-links-list {
+    list-style: none;
+}
+
+.footer-links-list li {
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    color: rgba(237, 152, 95, 0.75);
+    /* softer orange */
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.footer-links-list li:hover {
+    color: #ED985F;
+    /* full orange on hover */
+}
+
+.footer-bottom-strip {
+    padding-top: var(--space-4);
+    border-top: 1px solid rgba(237, 152, 95, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: rgba(237, 152, 95, 0.6);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .feature-grid-elite {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-split {
+        flex-direction: column;
+    }
+
+    .hero-visual-side {
+        display: none;
+    }
+
+    .hero-content-side {
+        padding: var(--space-8) 0;
+        text-align: center;
+    }
+
+    .hero-subtext-elite {
+        margin: 0 auto var(--space-6) auto;
+    }
+}

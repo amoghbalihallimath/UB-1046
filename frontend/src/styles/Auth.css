@@ -1,0 +1,324 @@
+/* Auth Page Styles — Aligned with Samadhana AI Design System */
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    background: var(--elite-bg);
+}
+
+.auth-split {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Left Brand Panel */
+.auth-brand {
+    flex: 1;
+    background: linear-gradient(145deg, var(--elite-navy-deep) 0%, var(--elite-navy) 60%, #003f7a 100%);
+    color: white;
+    padding: 3rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-brand::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 50%;
+}
+
+.auth-brand::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -20%;
+    width: 300px;
+    height: 300px;
+    background: rgba(237, 152, 95, 0.1);
+    border-radius: 50%;
+}
+
+.auth-brand-logo {
+    width: 64px;
+    height: 64px;
+    background: var(--elite-saffron);
+    border-radius: var(--radius-elite);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 16px rgba(237, 152, 95, 0.4);
+    font-family: 'Outfit', sans-serif;
+}
+
+.auth-brand-title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+}
+
+.auth-brand-tagline {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 0.5rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-brand-divider {
+    width: 48px;
+    height: 3px;
+    background: var(--elite-saffron);
+    border-radius: 2px;
+    margin: 2rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-brand-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-feature-item {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.auth-brand-disclaimer {
+    margin-top: 2.5rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+/* Right Form Panel */
+.auth-form-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background: var(--elite-white);
+}
+
+.auth-form-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+.auth-form-header {
+    margin-bottom: 1.5rem;
+}
+
+.auth-form-header h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--elite-navy-deep);
+    letter-spacing: -0.3px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.auth-form-header p {
+    font-size: 0.9rem;
+    color: var(--elite-text-muted);
+    margin-top: 0.25rem;
+}
+
+/* Tab Group */
+.auth-tab-group {
+    display: flex;
+    background: var(--elite-bg);
+    border-radius: var(--radius-elite);
+    padding: 4px;
+    margin-bottom: 2.5rem;
+    /* Increased space between options and form */
+    border: 1px solid var(--elite-border);
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    border: none;
+    background: none;
+    border-radius: calc(var(--radius-elite) - 2px);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--elite-text-muted);
+    cursor: pointer;
+    transition: var(--transition-elite);
+    font-family: 'Inter', sans-serif;
+}
+
+.auth-tab.active {
+    background: var(--elite-white);
+    color: var(--elite-navy-deep);
+    box-shadow: var(--shadow-elite-sm);
+}
+
+/* Form elements */
+.form-group {
+    margin-bottom: 1.5rem;
+    /* Increased space between form fields */
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--elite-text-body);
+    margin-bottom: 0.4rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.required {
+    color: #c62828;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    /* Slightly more padding for a premium feel */
+    border: 1.5px solid var(--elite-border);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    color: var(--elite-text-body);
+    background: var(--elite-white);
+    transition: var(--transition-elite);
+    outline: none;
+}
+
+.form-input:focus {
+    border-color: var(--elite-saffron);
+    box-shadow: 0 0 0 3px rgba(237, 152, 95, 0.15);
+}
+
+.form-input::placeholder {
+    color: #94a3b8;
+}
+
+.input-error {
+    border-color: #c62828 !important;
+}
+
+.form-error {
+    display: block;
+    font-size: 0.75rem;
+    color: #c62828;
+    margin-top: 0.25rem;
+}
+
+/* Alerts */
+.alert {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.alert-error {
+    background: #fef2f2;
+    color: #c62828;
+    border: 1px solid #fca5a5;
+}
+
+/* Submit button */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-elite);
+    border: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-primary {
+    background: var(--elite-navy-deep);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+}
+
+.btn-primary:active {
+    transform: scale(0.97);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 1.5rem;
+    /* Increased margin above the submit button */
+}
+
+.auth-legal {
+    margin-top: 1.25rem;
+    font-size: 0.75rem;
+    color: var(--elite-text-muted);
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .auth-split {
+        flex-direction: column;
+    }
+
+    .auth-brand {
+        padding: 2rem;
+        flex: none;
+        min-height: auto;
+    }
+
+    .auth-brand-features {
+        display: none;
+    }
+
+    .auth-form-panel {
+        padding: 1.5rem;
+        background: var(--elite-bg);
+        align-items: flex-start;
+    }
+
+    .auth-form-card {
+        max-width: 100%;
+    }
+}

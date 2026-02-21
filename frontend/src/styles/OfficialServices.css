@@ -1,0 +1,188 @@
+/* Elite Professional Official Services Styles */
+
+.services-page {
+    background-color: var(--elite-bg);
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-12);
+}
+
+.services-header-elite {
+    margin-bottom: var(--space-8);
+    border-bottom: 2px solid var(--elite-saffron);
+    padding-bottom: var(--space-4);
+}
+
+.services-title-elite {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--elite-navy-deep);
+    margin-bottom: var(--space-1);
+}
+
+.services-subtitle-elite {
+    font-size: 1.1rem;
+    color: var(--elite-text-muted);
+}
+
+/* --- Official Trust Bar --- */
+.trust-bar-elite {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--elite-navy-deep);
+    color: white;
+    padding: 16px 24px;
+    border-radius: var(--radius-elite);
+    margin-bottom: var(--space-6);
+    font-size: 0.85rem;
+    box-shadow: var(--shadow-elite-md);
+}
+
+.trust-icon-elite {
+    font-size: 1.25rem;
+}
+
+/* --- Interactive Filter Bar --- */
+.filter-bar-elite {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: var(--space-8);
+    padding: 12px;
+    background: white;
+    border-radius: var(--radius-elite);
+    border: 1px solid var(--elite-border);
+}
+
+.filter-chip-elite {
+    padding: 8px 18px;
+    border-radius: var(--radius-pill);
+    border: 1.5px solid var(--elite-border);
+    background: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--elite-text-muted);
+    cursor: pointer;
+    transition: var(--transition-elite);
+}
+
+.filter-chip-elite:hover {
+    border-color: var(--elite-navy-deep);
+    color: var(--elite-navy-deep);
+}
+
+.filter-chip-elite.active {
+    background: var(--elite-navy-deep);
+    color: white;
+    border-color: var(--elite-navy-deep);
+    box-shadow: var(--shadow-elite-sm);
+}
+
+/* --- High-Fidelity Service Cards --- */
+.services-grid-elite {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-4);
+}
+
+.service-card-elite {
+    background: white;
+    border-radius: var(--radius-elite);
+    padding: var(--space-6);
+    border: 1px solid var(--elite-border);
+    box-shadow: var(--shadow-elite-sm);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-elite);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card-elite::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--service-theme);
+    opacity: 0.7;
+}
+
+.service-card-elite:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-elite-lg);
+    border-color: var(--service-theme);
+}
+
+.card-header-elite {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-4);
+}
+
+.icon-box-elite {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: var(--elite-bg-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: var(--service-theme);
+    border: 1px solid var(--elite-border);
+}
+
+.tag-elite {
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--elite-text-muted);
+    background: var(--elite-bg-soft);
+    padding: 4px 10px;
+    border-radius: var(--radius-pill);
+    letter-spacing: 0.5px;
+}
+
+.service-name-elite {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--elite-navy-deep);
+    margin-bottom: 8px;
+}
+
+.service-desc-elite {
+    font-size: 0.9rem;
+    color: var(--elite-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-6);
+    flex: 1;
+}
+
+.card-footer-elite {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--space-4);
+    border-top: 1px dashed var(--elite-border);
+}
+
+.url-hint-elite {
+    font-size: 0.75rem;
+    color: var(--elite-saffron);
+    font-weight: 700;
+    text-transform: lowercase;
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+    .services-grid-elite {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-bar-elite {
+        justify-content: center;
+    }
+}
