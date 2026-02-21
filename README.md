@@ -1,4 +1,4 @@
-# JanSeva — Citizen Services & AI Grievance Redressal Portal
+# SAMADHANA AI — Citizen Services & AI Grievance Redressal Portal
 
 A production-grade, government-style web application for district-level citizen services, AI-powered grievance submission, real-time tracking, and admin-controlled department coordination.
 
@@ -133,4 +133,4 @@ janseva/
 
 ## 📞 Official Contact
 
-**JanSeva Grievance Cell:** jansevaaiportal@gmail.com
+**SAMADHANA AI Grievance Cell:** jansevaaiportal@gmail.com
